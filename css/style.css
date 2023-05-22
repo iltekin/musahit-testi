@@ -7,7 +7,7 @@
 
 body {
     background-color: #ffffff;
-    background-image: url("../image/background.jpg?v=27");
+    background-image: url("../image/background.jpg?v=28");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -633,7 +633,7 @@ li:hover {
 }
 
 #kart-container {
-    height: 97vh;
+    margin-bottom: 100px;
     z-index: 3;
 }
 
@@ -645,17 +645,24 @@ li:hover {
     border-radius: 10px;
     overflow: hidden;
     margin-top: 4vw;
+    width: 90%;
+    margin-left: 5%;
 }
 
 #kart {
-    max-height: 80vh;
-    max-width: 90vw;
+    width: auto;
+    height: 70vh;
 }
 
 @media only screen and (max-width: 767px) {
 
     .kart-body {
-        margin-top: 30vw;
+        margin-top: 10vw;
+    }
+
+    #kart {
+        width: 100%;
+        height: auto;
     }
 
     .inner-container {

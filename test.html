@@ -1,0 +1,285 @@
+<!-- 
+
+musahittesti.org - 2023
+
+İletişim için
+sezer@iltekin.com
+
+-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.css?v=27"/>
+    <link rel="icon" href="favicon.png?v=27"/>
+
+    <!-- Primary Meta Tags -->
+    <title>Bilinçli Müşahit Testi</title>
+    <meta name="title" content="Bilinçli Müşahit">
+    <meta name="description" content="6 farklı seviyedeki testi tamamlayarak Bilinçli Müşahit Sertifikası kazanabileceğiniz web sitesi.">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://musahittesti.org/">
+    <meta property="og:title" content="Bilinçli Müşahit Testi">
+    <meta property="og:description" content="6 farklı seviyedeki testi tamamlayarak Bilinçli Müşahit Sertifikası kazanabileceğiniz web sitesi.">
+    <meta property="og:image" content="https://musahittesti.org/image/meta.png?v=27">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://musahittesti.org/">
+    <meta property="twitter:title" content="Bilinçli Müşahit Testi">
+    <meta property="twitter:description" content="6 farklı seviyedeki testi tamamlayarak Bilinçli Müşahit Sertifikası kazanabileceğiniz web sitesi.">
+    <meta property="twitter:image" content="https://musahittesti.org/image/meta.png?v=27">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EJDVC0486"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3EJDVC0486');
+    </script>
+
+</head>
+<body>
+
+<div id='time-progressbar'></div>
+
+<div id="menu">
+
+    <div id="info">
+        <span id="questionMark">?</span>
+        <span id="closeIcon" class="hideThis">x</span>
+    </div>
+
+    <div id="menuContents" class="hideThis">
+        <h2>Bilinçli Müşahit Testi Nedir?</h2>
+        <div class="menu-inner">
+            Bir grup sandık gönüllüsünün <a class="brandColor" href="https://www.resmigazete.gov.tr/eskiler/2023/03/20230317-10.pdf" target="_blank">Genelge 135</a>,
+            <a class="brandColor" href="https://www.mevzuat.gov.tr/mevzuatmetin/1.4.298.pdf" target="_blank">Kanun 298</a>  ve Oy ve Ötesi Müşahit Eğitimi sunumlarını kullanarak oluşturduğu çalışma sorularını isteyen müşahitlerin kendilerini test etmesi ve bilgilendirmesi amacıyla paylaşma projesidir.
+            <br/>
+            <br/>
+            Bu proje hiçbir siyasi partiyle doğrudan ve dolaylı yoldan ilişkili değildir. Herhangi bir siyasi partiye, adaya ya da bir oluşuma yönlendirme yapılmamaktadır.
+            <br/>
+            <br/>
+            Bu websitesindeki testler kolaydan zora giden 6 testten ve toplamda 70 sorudan oluşmaktadır.  Sorulan sorulardan %70’ini doğru yanıtlayanlara sembolik ve resmi geçerliliği olmayan “Bilinçli Müşahit” sertifikası verilmektedir.
+            <br/>
+            <br/>
+            <small>
+                <small>Bilgilendirme </small><br/>
+                <div id="bilgilendirme">
+                    Bu web sitesi <a class="brandColor" href="https://github.com/iltekin/musahit-testi" target="_blank">açık kaynak kodlu</a> olup kullanıcılara ait hiçbir bilgi işlenmez ve herhangi bir veritabanına kaydedilmez. Sertifika direkt olarak kullandığınız cihazda (<a class="brandColor" href="https://en.wikipedia.org/wiki/Client-side" target="_blank">client-side</a>) üretilmekte ve herhangi bir sunucuda saklanmamaktadır.
+                </div>
+            </small>
+            <button class="other-btn other-btn-sm red-gradient" id="clearButton">Testi Sıfırla</button>
+        </div>
+    </div>
+</div>
+
+<a title="Bilinçli Müşahit" href="https://musahittesti.org"><img class="logo" src="image/logo.svg?v=27" alt="Bilinçli Müşahit"></a>
+
+<div id="questionInfo">
+    <div>SORU</div>
+    <div><span id="qNumber">0</span> / <span id="qLimit">0</span></div>
+</div>
+
+<div id="time">
+    <div>KALAN SÜRE</div>
+    <div><span id="timeLeft">0</span></div>
+</div>
+
+<div id="main_container">
+
+    <div id="seviye-container">
+        <span id="seviye">SEVIYE</span>
+    </div>
+    <div id="qc" class="quiz-container">
+        
+        <div id="quiz-progress">
+            <div id="progress-bar" class="red-gradient"></div>
+        </div>
+    
+        <div class="quiz-inner" id="welcome-message">
+            <div class="quiz-header">
+                <h2>Hazırsanız başlayalım!</h2>
+                <div class="welcome-inner">
+                    10 soruya 150 saniyede doğru cevap verebilirseniz “Bilinçli Müşahit Sertifikası” kazanacaksınız.
+                </div>
+            </div>
+            <button id="start" class="red-gradient">Başla →</button>
+        </div>
+    
+        <div class="quiz-inner" id="quiz">
+            <div class="quiz-header">
+                <h2 id="question">Question text</h2>
+                <p id="prefix"></p>
+                <ul>
+                    <li id="a_container">
+                        <input type="radio" name="answer" id="a" class="answer">
+                        <label for="a" id="a_text">Question</label>
+                    </li>
+
+                    <li id="b_container">
+                        <input type="radio" name="answer" id="b" class="answer">
+                        <label for="b" id="b_text">Question</label>
+                    </li>
+
+                    <li id="c_container">
+                        <input type="radio" name="answer" id="c" class="answer">
+                        <label for="c" id="c_text">Question</label>
+                    </li>
+
+                    <li id="d_container">
+                        <input type="radio" name="answer" id="d" class="answer">
+                        <label for="d" id="d_text">Question</label>
+                    </li>
+
+                    <li id="e_container">
+                        <input type="radio" name="answer" id="e" class="answer">
+                        <label for="e" id="e_text">Question</label>
+                    </li>
+                </ul>
+                <div style="display: flex;width: 100%;flex-direction: row-reverse;font-size: 11px;padding: 0 20px 10px 20px;justify-content: space-between;align-items: center;align-content: center;">
+                    <div id="sender" style="text-align: right;"></div>
+                    <div id="sources" style="text-align: left;"></div>
+                </div>
+            </div>
+            <button id="submit" class="red-gradient" style="width: 100%;">Cevapla →</button>
+        </div>
+        
+        
+        <div class="quiz-inner" id="explanation" style="display:none">
+            <div class="quiz-header">
+                <h2 id="question">EXPLANATION</h2>
+                <p id="prefix"></p>
+                <div>test</div>
+                <div style="display: flex;width: 100%;flex-direction: row-reverse;font-size: 11px;padding: 0 20px 10px 20px;justify-content: space-between;align-items: center;align-content: center;">
+                    <div id="sender" style="text-align: right;"></div>
+                    <div id="sources" style="text-align: left;"></div>
+                </div>
+            </div>
+            <button id="submit" class="red-gradient" style="width: 100%;">Sonraki Soruya Geç →</button>
+        </div>
+        
+    </div>
+    
+    <div id="loader">
+        <div class="certProgress certProgress-moved">
+            <div class="certProgressBar"></div>
+            <div id="certPercent" class="certProgressLoader" style="--n: 1; --f: 0;"></div>
+        </div>
+        <h2 id="creating-certificates-message">SERTİFİKALAR OLUŞTURULUYOR...</h2>
+    </div>
+    
+    <div id="certificateContainer">
+        <div style="width:1920px; height:1380px">
+            <canvas id="canvas" width="1920px" height="1380px"></canvas>
+        </div>
+        <div style="width:1920px; height:1380px">
+            <canvas id="canvas2" width="1920px" height="1380px"></canvas>
+        </div>
+    </div>
+    
+    <div id="certificateImageContainer" style="display:none;">
+        <div id="certificateImageContainerInner">
+            <div id="certificateImages">
+                <div class="certificate" id="certificate-1" style="display:none;">
+                    <img id="sertifika_img" src="" alt="sertifika">
+                </div>
+            </div>
+
+            <div class="row my-2">
+                <div class="button-container">
+
+                    <div id="download-notice">
+                        <div class="noticeIcon">
+                            <img src="image/touch.png">
+                        </div>
+                        <div>
+                            Sertifikanızı, üzerine basılı tutarak açılacak menüden galerinize kaydedebilirsiniz.
+                        </div>
+                    </div>
+
+                    <a href="#" class="red-gradient m-download" id="download-btn">Sertifikamı İndir</a>
+                    <a class="other-btn twitter-gradient" id="twitter-share" target="_blank" href="https://twitter.com/intent/tweet?hashtags=bilinclimusahit&text=Bilin%C3%A7li%20Müşahit%20Sertifikam%C4%B1%20ald%C4%B1m.%20Sen%20de%20almak%20i%C3%A7in%20t%C4%B1kla!&url=https%3A%2F%2Fmusahittesti.org">Twitter'da Paylaş</a>
+                </div>
+
+                <div id="email-notice" style="display: none;">
+                    <div class="noticeIcon">
+                        <img src="image/email.png">
+                    </div>
+                    <div>
+                        Bir sonraki projeden haberdar olmak isterseniz <a href="" target="_blank">E-posta listemize</a> katılabilirsiniz.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div id="kart-container" class="gizle">
+
+    <div class="inner-kart-container">
+
+        <div class="kart-body">
+
+            <img id="kart" src="" alt="Dogru Cevap">
+
+            <div class="kart-button">
+                <button onclick="switchKart()" class="red-gradient">Devam →</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<div id="footer">
+    <div id="success_rate" style="display:none;">
+        <div class="transparent_box">
+            <span title="Teste Katılan Kişi Sayısı" id="hits">0</span>🙍🏻‍♂
+        </div>
+        <div class="transparent_box">
+            <span title="Başarılı Kişi Sayısı" id="certificates">0</span>🏆
+        </div>
+        <div class="transparent_box">
+            <span title="Başarılı Kişi Oranı" id="success_percent">%0</span>📈
+        </div>
+    </div>
+    <a href="https://brainworks.dev" target="_blank">
+        <img src="image/brainworks.svg?v=27" alt="iltekin brainworks">
+    </a>
+</div>
+
+<audio id="failed">
+    <source src="sound/failed.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="invalid">
+    <source src="sound/invalid.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="next">
+    <source src="sound/next.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="select">
+    <source src="sound/select.mp3" type="audio/mpeg">
+</audio>
+
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+<script src="js/data1.js?v=27"></script>
+<script src="js/data2.js?v=27"></script>
+<script src="js/data3.js?v=27"></script>
+<script src="js/data4.js?v=27"></script>
+<script src="js/data5.js?v=27"></script>
+<script src="js/data6.js?v=27"></script>
+<script src="js/script.js?v=27"></script>
+
+</body>
+</html>

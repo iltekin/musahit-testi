@@ -3,7 +3,7 @@ const quizData1 = [
         question: "Saat 17:00 olduğu anda sırada seçmenlere varsa;",
         a: "Oy kullanamaz evlerine gönderilir",
         b: "Oy kullandırılmaz ama yardım etmeye çağırılır",
-        c: "İçerde oldukları için başkan tarafından sayılır, kimlikleri toplanır ve oy kullandırılır",
+        c: "Sırada oldukları için başkan tarafından sayılır, kimlikleri toplanır ve oy kullandırılır",
         d: "Sandık kurulu toplanır ve oy kullanıp kullanamayacakları konusunda karar verilir",
         correct: "c",
     },

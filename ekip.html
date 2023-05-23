@@ -397,6 +397,12 @@ sezer@iltekin.com
 
     function completeAll() {
 
+        // ask a password
+        const password = prompt("Şifre girin");
+        if (password !== "1923") {
+            alert("Şifre yanlış");
+            return;
+        }
         for(let i = 1; i <= 6; i++){
             localStorage.setItem('completed' + i , 'true');  // Tamamlanan testin durumunu kaydet
         }

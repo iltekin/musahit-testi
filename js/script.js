@@ -1,5 +1,15 @@
 const api = "https://count.musahittesti.org:5001";
-let level = localStorage.getItem('level') || 1;
+
+let restart = false;
+const restartCheck = localStorage.getItem('restart') || false;
+let level = localStorage.getItem('level')|| 1;
+
+if(restartCheck === "true") {
+    restart = true;
+    level = localStorage.getItem('restartIndex') || 1;
+    localStorage.setItem('restart', false);
+}
+
 const nextLevel = parseInt(level) + 1;
 
 const answerTime = 60;
@@ -38,7 +48,7 @@ const today = formatDate(new Date());
 const downloadBtn = document.getElementById('download-btn');
 
 const image = new Image();
-image.src = 'image/certificate.png?v=30';
+image.src = 'image/certificate.png?v=31';
 
 if(CSS.registerProperty !== undefined){
     CSS.registerProperty({
@@ -384,10 +394,12 @@ function createSourceLink(URL, number) {
     return a;
 }
 
+function updateKart(q) {
+    kartImage.src = 'image/kart/'+ level +'_'+ q +'.jpg';
+}
+
 function loadQuiz() {
     deselectAnswers()
-
-    kartImage.src = 'image/kart/'+ level +'_'+ currentQuiz +'.jpg';
 
     const currentQuizData = quizData[currentQuiz]
     
@@ -531,6 +543,12 @@ function completeTest() {
 
 }
 
+function restartTest(testIndex) {
+    localStorage.setItem("restart", true);
+    localStorage.setItem("restartIndex", testIndex);
+    window.location.href = "test.html";
+}
+
 submitBtn.addEventListener('click', () => {
 
     const answer = getSelected()
@@ -547,13 +565,13 @@ submitBtn.addEventListener('click', () => {
             }
 
             currentQuiz++
+            updateKart(currentQuiz);
 
             if(currentQuiz < quizLimit) {
                 loadQuiz();
                 clearLiHighlights();
                 playNow("next");
             } else {
-
             clearInterval(counter);
             let endDate = new Date();
             totalTime = Math.floor((endDate.getTime() - start.getTime()) / 1000);
@@ -562,34 +580,69 @@ submitBtn.addEventListener('click', () => {
             if(score < minCorrectAnswer){
                 increaseTried();
                 playNow("failed");
-                quiz.innerHTML = `
-                <div id="result">
-                <h2>Maalesef...</h2>
-                <div class="result-inner">
-                    ${quizLimit} sorunun ${score} tanesini doğru cevapladınız ve en az ${minCorrectAnswer} doğru cevap gerekiyordu.</br></br> Yeniden denemek ister misiniz?
-                </div>
-                </div>
-                <div class="failed-buttons-container">
-                <button class="try-again-button_IPTAL red-gradient failed-screen-double-button_IPTAL" onclick="location.reload()">Yeniden Dene</button><button class="green-gradient failed-screen-double-button" style="display: none" onclick="getName(true)">Anıt Zeytin Ağacı Farkındalık Sertifikamı Oluştur</button>
-                </div>
-           `
+
+                if(restart){
+                    quiz.innerHTML = `
+                        <div id="result">
+                        <h2>Maalesef...</h2>
+                        <div class="result-inner">
+                            ${quizLimit} sorunun ${score} tanesini doğru cevapladınız ve en az ${minCorrectAnswer} doğru cevap gerekiyordu.</br></br> Yeniden denemek ister misiniz?
+                        </div>
+                        </div>
+                        <div class="failed-buttons-container">
+                        <button class="try-again-button_IPTAL red-gradient failed-screen-double-button" onclick="redirectToHome()">Ana Menüye Dön</button>
+                        <button class="try-again-button_IPTAL red-gradient failed-screen-double-button" onclick="restartTest(level)">Yeniden Dene</button>
+                        </div>
+                   `
+                } else {
+                    quiz.innerHTML = `
+                        <div id="result">
+                        <h2>Maalesef...</h2>
+                        <div class="result-inner">
+                            ${quizLimit} sorunun ${score} tanesini doğru cevapladınız ve en az ${minCorrectAnswer} doğru cevap gerekiyordu.</br></br> Yeniden denemek ister misiniz?
+                        </div>
+                        </div>
+                        <div class="failed-buttons-container">
+                        <button class="try-again-button_IPTAL red-gradient failed-screen-double-button" onclick="redirectToHome()">Ana Menüye Dön</button>
+                        <button class="try-again-button_IPTAL red-gradient failed-screen-double-button" onclick="location.reload()">Yeniden Dene</button>
+                        </div>
+                   `
+                }
+
             } else {
                 let tada = new Audio("sound/tada.mp3");
                 tada.play();
-                
-                var checkallCompleted = completeTest();
-                if(!checkallCompleted){
+
+                if(restart){
                     quiz.innerHTML = `
+                        <div id="result">
+                        <h2>Tebrikler!</h2>
+                        <div class="result-inner">
+                           ${quizLimit} sorunun ${score} tanesini doğru cevapladınız.</br></br>Bu testi daha önce de tamamlamıştınız. Yeniden denemek ister misiniz?
+                        </div>
+                        </div>
+                        <div class="failed-buttons-container">                        
+                        <button class="try-again-button_IPTAL red-gradient failed-screen-double-button" onclick="redirectToHome()">Ana Menüye Dön</button>
+                        <button class="try-again-button_IPTAL red-gradient failed-screen-double-button" onclick="restartTest(level)">Yeniden Dene</button>
+                        </div>
+                    `
+                } else {
+                    var checkallCompleted = completeTest();
+                    if(!checkallCompleted){
+                        quiz.innerHTML = `
                 <div id="result">
                 <h2>Tebrikler!</h2>
                 <div class="result-inner">
                    ${quizLimit} sorunun ${score} tanesini doğru cevapladınız.</br></br>
                 </div>
                 </div>
-                <a href="test.html" class="next-level-button red-gradient" >` + nextLevel + `. Seviye Testine Geç</a>
+                <div class="failed-buttons-container">
+                <button class="try-again-button_IPTAL red-gradient failed-screen-double-button" onclick="redirectToHome()">Ana Menüye Dön</button>
+                <button class="try-again-button_IPTAL red-gradient failed-screen-double-button" onclick="location.reload()">${nextLevel}. Seviye Testine Geç →</button>
+                </div>
             `
-                } else {
-                    quiz.innerHTML = `
+                    } else {
+                        quiz.innerHTML = `
                 <div id="result">
                 <h2>Tebrikler!</h2>
                 <div class="result-inner">
@@ -602,8 +655,9 @@ submitBtn.addEventListener('click', () => {
                     </p>
                 </div>
                 </div>
-                <button class="red-gradient" onclick="getName()">Sertifikamı Oluştur</button>
+                <button class="red-gradient" onclick="getName()">Sertifikamı Oluştur →</button>
             `
+                    }
                 }
             }
         }

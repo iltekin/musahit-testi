@@ -7,7 +7,7 @@
 
 body {
     background-color: #ffffff;
-    background-image: url("../image/background.jpg?v=30");
+    background-image: url("../image/background.jpg?v=31");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -650,10 +650,21 @@ li:hover {
 
 .true_false {
     position: absolute;
-    left: 50%;
-    width: 60px;
-    transform: translateX(-50%);
+    left: 0;
     top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.true_false .tf_text {
+    margin-left: 8px;
+    font-size: 24px;
+}
+
+.true_false img {
+    width: 30px;
 }
 
 #kart {
@@ -669,6 +680,10 @@ li:hover {
     left: 0;
     height: 70vh;
     width: auto;
+}
+
+.border-top-white {
+    border-top: 2px solid #fff;
 }
 
 @media only screen and (max-width: 767px) {
@@ -688,8 +703,11 @@ li:hover {
     }
 
     .true_false {
-        width: 40px;
         top: 20px;
+    }
+
+    .true_false img {
+        width: 24px;
     }
 
     .inner-container {

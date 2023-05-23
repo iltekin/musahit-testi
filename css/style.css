@@ -7,7 +7,7 @@
 
 body {
     background-color: #ffffff;
-    background-image: url("../image/background.jpg?v=28");
+    background-image: url("../image/background.jpg?v=29");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -645,13 +645,30 @@ li:hover {
     border-radius: 10px;
     overflow: hidden;
     margin-top: 4vw;
-    width: 90%;
-    margin-left: 5%;
+    position: relative;
+}
+
+.true_false {
+    position: absolute;
+    left: 50%;
+    width: 60px;
+    transform: translateX(-50%);
+    top: 30px;
 }
 
 #kart {
-    width: auto;
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#gizlikart {
+    top: 0;
+    left: 0;
     height: 70vh;
+    width: auto;
 }
 
 @media only screen and (max-width: 767px) {
@@ -663,6 +680,16 @@ li:hover {
     #kart {
         width: 100%;
         height: auto;
+    }
+
+    #gizlikart {
+        height: auto;
+        width: 85vw;
+    }
+
+    .true_false {
+        width: 40px;
+        top: 20px;
     }
 
     .inner-container {

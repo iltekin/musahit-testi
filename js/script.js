@@ -38,7 +38,7 @@ const today = formatDate(new Date());
 const downloadBtn = document.getElementById('download-btn');
 
 const image = new Image();
-image.src = 'image/certificate.png?v=28';
+image.src = 'image/certificate.png?v=29';
 
 if(CSS.registerProperty !== undefined){
     CSS.registerProperty({
@@ -539,6 +539,11 @@ submitBtn.addEventListener('click', () => {
             document.getElementById("progress-bar").style.width = widthInPercent + "%";
             if(answer === quizData[currentQuiz].correct) {
                 score++
+                document.getElementById("false").classList.add("gizle");
+                document.getElementById("true").classList.remove("gizle");
+            } else {
+                document.getElementById("true").classList.add("gizle");
+                document.getElementById("false").classList.remove("gizle");
             }
 
             currentQuiz++

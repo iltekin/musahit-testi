@@ -7,7 +7,7 @@
 
 body {
     background-color: #ffffff;
-    background-image: url("../image/background.jpg?v=31");
+    background-image: url("../image/background.jpg?v=33");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -643,19 +643,22 @@ li:hover {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
-    overflow: hidden;
-    margin-top: 4vw;
+    margin-top: 6vw;
     position: relative;
 }
 
 .true_false {
     position: absolute;
-    left: 0;
-    top: 30px;
+    left: 50%;
+    top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    background: #f3ede4;
+    transform: translate(-50%, -50%);
+    padding: 6px 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgba(100, 100, 100, 0.1);
 }
 
 .true_false .tf_text {
@@ -686,10 +689,15 @@ li:hover {
     border-top: 2px solid #fff;
 }
 
+.bottom-radius {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
 @media only screen and (max-width: 767px) {
 
     .kart-body {
-        margin-top: 10vw;
+        margin-top: 40vw;
     }
 
     #kart {
@@ -703,11 +711,17 @@ li:hover {
     }
 
     .true_false {
-        top: 20px;
+        min-width: 70%;
+        text-align: center;
+        transform: translate(-50%, -70%);
     }
 
     .true_false img {
         width: 24px;
+    }
+
+    .true_false .tf_text {
+        font-size: 16px;
     }
 
     .inner-container {

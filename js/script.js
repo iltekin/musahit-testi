@@ -48,7 +48,7 @@ const today = formatDate(new Date());
 const downloadBtn = document.getElementById('download-btn');
 
 const image = new Image();
-image.src = 'image/certificate.png?v=33';
+image.src = 'image/certificate.png?v=34';
 
 if(CSS.registerProperty !== undefined){
     CSS.registerProperty({
@@ -395,7 +395,7 @@ function createSourceLink(URL, number) {
 }
 
 function updateKart(q) {
-    kartImage.src = 'image/kart/'+ level +'_'+ q +'-min.png?v=33';
+    kartImage.src = 'image/kart/'+ level +'_'+ q +'-min.png?v=34';
 }
 
 function loadQuiz() {

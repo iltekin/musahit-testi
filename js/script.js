@@ -395,7 +395,7 @@ function createSourceLink(URL, number) {
 }
 
 function updateKart(q) {
-    kartImage.src = 'image/kart/'+ level +'_'+ q +'.png?v=33';
+    kartImage.src = 'image/kart/'+ level +'_'+ q +'-min.png?v=33';
 }
 
 function loadQuiz() {

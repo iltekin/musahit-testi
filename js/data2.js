@@ -4,7 +4,6 @@ const quizData2 = [
         a: "EVET",
         b: "HAYIR",
         correct: "a",
-        explanation: "Evet, evlilik cüzdanının ibrazı ile oy kullanabilirler.",
     },
     {
         question: "Sayım döküm işlemi bittikten sonra sandık sonuç tutanağıyla beraber ağzı mühürlü seçim torbasını ilçe seçim kuruluna kimler götürür?",
@@ -13,7 +12,6 @@ const quizData2 = [
         c: "Okul Sorumlusu",
         d: "Sandık Başkanı ve 2 Sandık kurulu üyesi",
         correct: "d",
-        explanation: "Madde 45'a göre sandık başkanı ve 2 sandık kurulu üyesi götürür.",
     },
     {
         question: "Sandığa gelen seçmenin oy kullanabilmesi için aşağıdakilerden hangisi kontrol edilmez?",
@@ -22,7 +20,6 @@ const quizData2 = [
         c: "Kimlikte TC kimlik numarası olup olmadığı",
         d: "Seçmenin sandığa ait seçmen listesinde olup olmadığı",
         correct: "a",
-        explanation: "Gözlük kullanıp kullanmadığı kontrol edilmez.",
     },
     {
         question: "Sandık sonuç tutanağında aşağıdakilerden hangisi bulunur?",
@@ -32,14 +29,12 @@ const quizData2 = [
         d: "Geçerli zarf ve pusula sayısı",
         e: "Hepsi",
         correct: "e",
-        explanation: "Sandık sonuç tutanağında hepsi bulunur.",
     },
     {
         question: "Kazara lekelenmiş olan, katlama sebebiyle mührün başka alanlara bulaştığı, mührün çizgili bölüme taştığı, aynı adaya/partiye birden çok mühür basılan oy pusulaları geçerli midir?",
         a: "Geçerlidir",
         b: "Geçersizdir",
         correct: "a",
-        explanation: "Bu pusulalar geçerlidir.",
     },
     {
         question: "Aşağıdakilerden bilgilerden hangisi müşahitlere dair doğrudur?",
@@ -48,7 +43,6 @@ const quizData2 = [
         c: "Müşahitler sandık kurulunun 298 numaralı kanuna aykırı işleyişlerde şikayet ve itiraz etmeye yetkilidir. (Kanun 298, md. 110, md. 128, md.116)",
         d: "Hepsi",
         correct: "d",
-        explanation: "Müşahitlerin tüm bu görevleri vardır.",
     },
     {
         question: "Sandık Kurullarında aşağıdakilerden hangisi görev alabilir?",
@@ -56,15 +50,13 @@ const quizData2 = [
         b: "Doktorlar",
         c: "Askerler",
         d: "TBMM üyeleri",
-        correct: "a",
-        explanation: "Zabıta memuru veya amiri görev alabilir (Genelge 135/26).",
+        correct: "b",
     },
     {
         question: "Sayım ve döküm sırasında sandığın bulunduğu odanın kapısı kapatılır.",
         a: "Doğru",
         b: "Yanlış",
         correct: "b",
-        explanation: "Kapı açık bırakılır (Genelge 135/37).",
     },
     {
         question: "Sandık kurulunun yapması gereken ilk görev nedir?",
@@ -73,13 +65,11 @@ const quizData2 = [
         c: "And İçme",
         d: "Sayım Yapmak",
         correct: "c",
-        explanation: "Genelge 135/11'e göre, sandık kurulu başkan ve üyeleri göreve başlamadan önce ilk iş olarak and içer.",
     },
     {
         question: "Sayım sırasında zarfın içinden çıkan el ilanı, broşür, özel işaret veya amblem taşıyan kağıt veya madde çıkması halinde o zarftan çıkan pusula geçerli sayılır mı?",
         a: "EVET",
         b: "HAYIR",
         correct: "b",
-        explanation: "Bu pusulalar hesaba katılmaz (Madde 43).",
     },
 ];

@@ -47,7 +47,7 @@ const quizData3 = [
     {
         question: "Aşağıdakilerden hangisi doğrudur?",
         a: "Sayım işlemleri sırasında zarflar, sandık görevlileri tarafından toplu şekilde açılarak okunur.",
-        b: "Önce CB seçimine ait pusulaların sayım ve dökümü yapılır.",
+        b: "Sayım ve döküm işlemlerine oy verme süresi tutanak defterine işlendikten sonra hemen başlanır.",
         c: "Zarftan çıkan pusulalar önce mühürlü yüzleri görünecek şekilde tasnif edilir.",
         d: "Sandıklar, sayım ve döküm işlemleri bitmeden oy verme alanından çıkarılıp daha geniş ve rahat bir alana götürülebilir.",
         correct: "b",

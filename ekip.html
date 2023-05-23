@@ -1,0 +1,439 @@
+<!-- 
+
+musahittesti.org - 2023
+
+İletişim için
+sezer@iltekin.com
+
+-->
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="css/style.css?v=31"/>
+    <link rel="icon" href="favicon.png?v=31"/>
+
+    <!-- Primary Meta Tags -->
+    <title>Bilinçli Müşahit Testi</title>
+    <meta name="title" content="Bilinçli Müşahit">
+    <meta name="description" content="6 farklı seviyedeki testi tamamlayarak Bilinçli Müşahit Sertifikası kazanabileceğiniz web sitesi.">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://musahittesti.org/">
+    <meta property="og:title" content="Bilinçli Müşahit Testi">
+    <meta property="og:description" content="6 farklı seviyedeki testi tamamlayarak Bilinçli Müşahit Sertifikası kazanabileceğiniz web sitesi.">
+    <meta property="og:image" content="https://musahittesti.org/image/meta.png?v=31">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://musahittesti.org/">
+    <meta property="twitter:title" content="Bilinçli Müşahit Testi">
+    <meta property="twitter:description" content="6 farklı seviyedeki testi tamamlayarak Bilinçli Müşahit Sertifikası kazanabileceğiniz web sitesi.">
+    <meta property="twitter:image" content="https://musahittesti.org/image/meta.png?v=31">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3EJDVC0486"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-3EJDVC0486');
+    </script>
+
+</head>
+<body>
+
+<div id='time-progressbar'></div>
+
+<div id="menu">
+
+    <div id="info">
+        <span id="questionMark">?</span>
+        <span id="closeIcon" class="hideThis">x</span>
+    </div>
+
+    <div id="menuContents" class="hideThis">
+        <h2>Bilinçli Müşahit Testi Nedir?</h2>
+        <div class="menu-inner">
+            Bir grup sandık gönüllüsünün <a class="brandColor" href="https://www.resmigazete.gov.tr/eskiler/2023/03/20230317-10.pdf" target="_blank">Genelge 135</a>,
+            <a class="brandColor" href="https://www.mevzuat.gov.tr/mevzuatmetin/1.4.298.pdf" target="_blank">Kanun 298</a> ve Oy ve Ötesi Müşahit Eğitimi sunumlarını kullanarak oluşturduğu çalışma sorularını isteyen müşahitlerin kendilerini test etmesi ve bilgilendirmesi amacıyla paylaşma projesidir.
+            <br/>
+            <br/>
+            Bu proje hiçbir siyasi partiyle doğrudan ve dolaylı yoldan ilişkili değildir. Herhangi bir siyasi partiye, adaya ya da bir oluşuma yönlendirme yapılmamaktadır.
+            <br/>
+            <br/>
+            Bu websitesindeki testler kolaydan zora giden 6 testten ve toplamda 70 sorudan oluşmaktadır.  Sorulan sorulardan %70’ini doğru yanıtlayanlara sembolik ve resmi geçerliliği olmayan “Bilinçli Müşahit” sertifikası verilmektedir.
+            <br/>
+            <br/>
+            <small>
+                <small>Bilgilendirme </small><br/>
+                <div id="bilgilendirme">
+                    Bu web sitesi <a class="brandColor" href="https://github.com/iltekin/musahit-testi" target="_blank">açık kaynak kodlu</a> olup kullanıcılara ait hiçbir bilgi işlenmez ve herhangi bir veritabanına kaydedilmez. Sertifika direkt olarak kullandığınız cihazda (<a class="brandColor" href="https://en.wikipedia.org/wiki/Client-side" target="_blank">client-side</a>) üretilmekte ve herhangi bir sunucuda saklanmamaktadır.
+                </div>
+            </small>
+            <button class="other-btn other-btn-sm red-gradient" id="clearButton">Testi Sıfırla</button>
+        </div>
+    </div>
+</div>
+
+<a title="Bilinçli Müşahit" href="https://musahittesti.org"><img class="logo" src="image/logo.svg?v=31" alt="Bilinçli Müşahit"></a>
+
+<div id="questionInfo">
+    <div>SORU</div>
+    <div><span id="qNumber">0</span> / <span id="qLimit">0</span></div>
+</div>
+
+<div id="time">
+    <div>KALAN SÜRE</div>
+    <div><span id="timeLeft">0</span></div>
+</div>
+
+<div class="outer-container">
+    
+    <div class="inner-container">
+        
+        <div class="general-desc">
+            6 farklı seviyedeki testi tamamlarsanız “Bilinçli Müşahit Sertifikası” kazanacaksınız.
+        </div>
+        
+        <div class="level-card">
+            
+            <div id="locked1" class="locked" style="display:none;">
+                <div class="icon">
+                    🔒
+                </div>
+            </div>  
+            
+            <div onclick="restart(1)" id="completed1" title="Tekrarla" class="icon" style="cursor:pointer; display:none;">
+                    🔄
+            </div>
+            
+            <div class="card-title">
+                SEVİYE 1
+            </div>            
+            
+            <div class="card-desc">
+                <div class="total-questions">
+                    10 SORU
+                </div>
+                <div class="min-correct">
+                    (Min 7 doğru cevap)
+                </div>
+            </div>
+
+            <div class="card-button" id="startButton1">
+                <a href="test.html" class="red-gradient">Başla →</a>
+            </div>
+            <div class="card-button" id="completedButton1">
+                <a class="green-gradient" style="">✅ Tamamlandı</a>
+            </div>
+            
+        </div>
+              
+        <div class="level-card">
+            
+            <div id="locked2" class="locked">
+                <div class="icon">
+                    🔒
+                </div>
+            </div>
+
+            <div onclick="restart(2)" id="completed2" title="Tekrarla" class="icon" style="cursor:pointer; display:none;">
+                🔄
+            </div>
+            
+            <div class="card-title">
+                SEVİYE 2
+            </div>            
+            
+            <div class="card-desc">
+                <div class="total-questions">
+                    10 SORU
+                </div>
+                <div class="min-correct">
+                    (Min 7 doğru cevap)
+                </div>
+            </div>
+                        
+            <div class="card-button" id="startButton2">
+                <a href="test.html" class="red-gradient">Başla →</a>
+            </div>
+            <div class="card-button" id="completedButton2">
+                <a class="green-gradient" style="">✅ Tamamlandı</a>
+            </div>
+            
+        </div>
+              
+        <div class="level-card">
+            
+            <div id="locked3" class="locked">
+                <div class="icon">
+                    🔒
+                </div>
+            </div>
+
+            <div onclick="restart(3)" id="completed3" title="Tekrarla" class="icon" style="cursor:pointer; display:none;">
+                🔄
+            </div>
+            
+            <div class="card-title">
+                SEVİYE 3
+            </div>            
+            
+            <div class="card-desc">
+                <div class="total-questions">
+                    10 SORU
+                </div>
+                <div class="min-correct">
+                    (Min 7 doğru cevap)
+                </div>
+            </div>
+
+            <div class="card-button" id="startButton3">
+                <a href="test.html" class="red-gradient">Başla →</a>
+            </div>
+            <div class="card-button" id="completedButton3">
+                <a class="green-gradient" style="">✅ Tamamlandı</a>
+            </div>
+            
+        </div>
+              
+        <div class="level-card">
+            
+            <div id="locked4" class="locked">
+                <div class="icon">
+                    🔒
+                </div>
+            </div>
+
+            <div onclick="restart(4)" id="completed4" title="Tekrarla" class="icon" style="cursor:pointer; display:none;">
+                🔄
+            </div>
+        
+            <div class="card-title">
+                SEVİYE 4
+            </div>            
+            
+            <div class="card-desc">
+                <div class="total-questions">
+                    10 SORU
+                </div>
+                <div class="min-correct">
+                    (Min 7 doğru cevap)
+                </div>
+            </div>
+
+            <div class="card-button" id="startButton4">
+                <a href="test.html" class="red-gradient">Başla →</a>
+            </div>
+            <div class="card-button" id="completedButton4">
+                <a class="green-gradient" style="">✅ Tamamlandı</a>
+            </div>
+            
+        </div>
+              
+        <div class="level-card">
+            
+            <div id="locked5" class="locked">
+                <div class="icon">
+                    🔒
+                </div>
+            </div>
+
+            <div onclick="restart(5)" id="completed5" title="Tekrarla" class="icon" style="cursor:pointer; display:none;">
+                🔄
+            </div>
+        
+            <div class="card-title">
+                SEVİYE 5
+            </div>            
+            
+            <div class="card-desc">
+                <div class="total-questions">
+                    10 SORU
+                </div>
+                <div class="min-correct">
+                    (Min 7 doğru cevap)
+                </div>
+            </div>
+
+            <div class="card-button" id="startButton5">
+                <a href="test.html" class="red-gradient">Başla →</a>
+            </div>
+            <div class="card-button" id="completedButton5">
+                <a class="green-gradient" style="">✅ Tamamlandı</a>
+            </div>
+            
+        </div>
+              
+        <div class="level-card">
+            
+            <div id="locked6" class="locked">
+                <div class="icon">
+                    🔒
+                </div>
+            </div>
+
+            <div onclick="restart(6)" id="completed6" title="Tekrarla" class="icon" style="cursor:pointer; display:none;">
+                🔄
+            </div>
+        
+            <div class="card-title">
+                SEVİYE 6
+            </div>            
+            
+            <div class="card-desc">
+                <div class="total-questions">
+                    20 SORU
+                </div>
+                <div class="min-correct">
+                    (Min 15 doğru cevap)
+                </div>
+            </div>
+
+            <div class="card-button" id="startButton6">
+                <a href="test.html" class="red-gradient">Başla →</a>
+            </div>
+            <div class="card-button" id="completedButton6">
+                <a class="red-gradient" href="test.html">🎉 Sertifikamı Oluştur</a>
+            </div>
+            
+        </div>
+        
+    </div>
+    
+</div>
+
+
+<div id="footer">
+    <div id="success_rate" style="display:none;">
+        <div class="transparent_box">
+            <span title="Teste Katılan Kişi Sayısı" id="hits">0</span>🙍🏻‍♂
+        </div>
+        <div class="transparent_box">
+            <span title="Başarılı Kişi Sayısı" id="certificates">0</span>🏆
+        </div>
+        <div class="transparent_box">
+            <span title="Başarılı Kişi Oranı" id="success_percent">%0</span>📈
+        </div>
+    </div>
+    <a href="https://brainworks.dev" target="_blank">
+        <img src="image/brainworks.svg?v=31" alt="iltekin brainworks">
+    </a>
+</div>
+
+<audio id="failed">
+    <source src="sound/failed.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="invalid">
+    <source src="sound/invalid.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="next">
+    <source src="sound/next.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="select">
+    <source src="sound/select.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+    
+    document.getElementById("info").addEventListener('click', function () {
+    this.classList.toggle("open");
+    document.getElementById("menuContents").classList.toggle("hideThis");
+    document.getElementById("questionMark").classList.toggle("hideThis");
+    document.getElementById("closeIcon").classList.toggle("hideThis");
+})
+
+    // Testlerin durumlarını saklamak için localStorage anahtarları
+    const localStorageKeys = {
+      locked: ['locked2', 'locked3', 'locked4', 'locked5', 'locked6', 'locked6'],
+      completed: ['completed1', 'completed2', 'completed3', 'completed4', 'completed5', 'completed6']
+    };
+    
+    // Testlerin durumunu kontrol et ve gerekli güncellemeleri yap
+    function updateTestStatus() {
+      for (let i = 0; i < localStorageKeys.locked.length; i++) {
+        const lockedKey = localStorageKeys.locked[i];
+        const completedKey = localStorageKeys.completed[i];
+    
+        const lockedElement = document.getElementById(lockedKey);
+        const completedElement = document.getElementById(completedKey);
+        const startButton = document.getElementById('startButton' + (i + 1));
+        const completedButton = document.getElementById('completedButton' + (i + 1));
+    
+        // Eğer test tamamlanmışsa
+        if (localStorage.getItem(completedKey)) {
+          lockedElement.style.display = 'none';  // Kilitli testi gizle
+          completedElement.style.display = 'block';  // Tamamlanan testi göster
+            startButton.style.display = 'none';  // Başlat düğmesini gizle
+            completedButton.style.display = 'block';  // Tamamlandı düğmesini göster
+        } else {
+          lockedElement.style.display = 'block';  // Kilitli testi göster
+          completedElement.style.display = 'none';  // Tamamlanan testi gizle
+            startButton.style.display = 'block';  // Başlat düğmesini göster
+            completedButton.style.display = 'none';  // Tamamlandı düğmesini gizle
+        }
+      }
+    }
+    
+    // Bir test tamamlandığında çağrılacak işlev
+    function completeTest(testIndex) {
+      const completedKey = localStorageKeys.completed[testIndex];
+      localStorage.setItem(completedKey, 'true');  // Tamamlanan testin durumunu kaydet
+      
+      if (testIndex < localStorageKeys.locked.length - 1) {
+        const nextLockedKey = localStorageKeys.locked[testIndex + 1];
+        localStorage.removeItem(nextLockedKey);  // Bir sonraki testin kilidini aç
+      }
+    
+      updateTestStatus();  // Test durumlarını güncelle
+    }
+
+    function completeAll() {
+
+        for(let i = 1; i <= 6; i++){
+            localStorage.setItem('completed' + i , 'true');  // Tamamlanan testin durumunu kaydet
+        }
+
+    }
+    
+    // Sayfa yüklendiğinde test durumlarını kontrol et
+    window.onload = function() {
+        completeAll();
+
+    const clearButton = document.getElementById('clearButton');
+    clearButton.addEventListener('click', clearLocalStorage);
+        
+      updateTestStatus();
+      
+      // Son testin tamamlandığını kontrol et
+      const lastCompletedKey = localStorageKeys.completed[localStorageKeys.completed.length - 1];
+      if (localStorage.getItem(lastCompletedKey)) {
+        const lastCompletedElement = document.getElementById(lastCompletedKey);
+        lastCompletedElement.style.display = 'block';  // Son tamamlanan testi göster
+      }
+    };
+    
+    function clearLocalStorage() {
+        localStorage.clear();
+        updateTestStatus();
+        clearButton.innerHTML = "Sıfırlandı";
+        setTimeout(function(){ clearButton.innerHTML = "Tüm Testleri Sıfırla"; }, 1000);
+    }
+
+    function restart(testIndex) {
+        localStorage.setItem("restart", true);
+        localStorage.setItem("restartIndex", testIndex);
+        window.location.href = "test.html";
+    }
+    
+</script>
+
+</body>
+</html>

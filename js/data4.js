@@ -63,7 +63,7 @@ const quizData4 = [
     },
     {
         question: " Sayım sırasında oy pusulalarından birine itiraz yapıldı ve sayım döküm sürecini izleyen bireyler arasında fiziksel şiddet içeren bir kavga çıktı. Ne yapılması gerekir?",
-        a: " Sandık kurulu başkanı seçimi durdurup müdahale eder.",
+        a: " Sayım ve döküm sonlandırılır, ilçe kuruluna sandık belgeleri teslim edilir.",
         b: " Seçmenler kolluk kuvvetlerinin müdahele etmesi için ihbar eder.",
         correct: "b",
     },

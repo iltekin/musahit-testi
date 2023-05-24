@@ -7,7 +7,7 @@
 
 body {
     background-color: #ffffff;
-    background-image: url("../image/background.jpg?v=40");
+    background-image: url("../image/background.jpg?v=41");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -703,6 +703,15 @@ li:hover {
 }
 
 @media only screen and (max-width: 767px) {
+
+    .sabitButon {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 999;
+        border-radius: unset;
+    }
 
     .kart-body {
         margin-top: 40vw;

@@ -352,34 +352,46 @@ sezer@iltekin.com
 
     // Testlerin durumlarını saklamak için localStorage anahtarları
     const localStorageKeys = {
-      locked: ['locked2', 'locked3', 'locked4', 'locked5', 'locked6', 'locked6'],
-      completed: ['completed1', 'completed2', 'completed3', 'completed4', 'completed5', 'completed6']
+        locked: ['locked1', 'locked2', 'locked3', 'locked4', 'locked5', 'locked6'],
+        completed: ['completed1', 'completed2', 'completed3', 'completed4', 'completed5', 'completed6'],
+        startButtons: ['startButton1', 'startButton2', 'startButton3', 'startButton4', 'startButton5', 'startButton6'],
+        completedButtons: ['completedButton1', 'completedButton2', 'completedButton3', 'completedButton4', 'completedButton5', 'completedButton6']
     };
     
-    // Testlerin durumunu kontrol et ve gerekli güncellemeleri yap
+
+    function unlockQuiz(number){
+        const index = number-1;
+        const key = localStorageKeys.locked[index];
+        const lockedElement = document.getElementById(key);
+        lockedElement.style.display = "none";
+    }
+
+    function completeQuiz(number){
+        const index = number-1;
+        const key = localStorageKeys.completed[index];
+
+        const completedElement = document.getElementById(key);
+        const startButton = document.getElementById(localStorageKeys.startButtons[index]);
+        const completedButton = document.getElementById(localStorageKeys.completedButtons[index]);
+
+        completedElement.style.display = "block";
+        startButton.style.display = "none";
+        completedButton.style.display = "block";
+    }
+
     function updateTestStatus() {
-      for (let i = 0; i < localStorageKeys.locked.length; i++) {
-        const lockedKey = localStorageKeys.locked[i];
-        const completedKey = localStorageKeys.completed[i];
-    
-        const lockedElement = document.getElementById(lockedKey);
-        const completedElement = document.getElementById(completedKey);
-        const startButton = document.getElementById('startButton' + (i + 1));
-        const completedButton = document.getElementById('completedButton' + (i + 1));
-    
-        // Eğer test tamamlanmışsa
-        if (localStorage.getItem(completedKey)) {
-          lockedElement.style.display = 'none';  // Kilitli testi gizle
-          completedElement.style.display = 'block';  // Tamamlanan testi göster
-            startButton.style.display = 'none';  // Başlat düğmesini gizle
-            completedButton.style.display = 'block';  // Tamamlandı düğmesini göster
-        } else {
-          lockedElement.style.display = 'block';  // Kilitli testi göster
-          completedElement.style.display = 'none';  // Tamamlanan testi gizle
-            startButton.style.display = 'block';  // Başlat düğmesini göster
-            completedButton.style.display = 'none';  // Tamamlandı düğmesini gizle
+        const quizCount = 6;
+        for(let q = 0; q < quizCount; q++){
+
+            const completedKey = localStorageKeys.completed[q];
+            if (localStorage.getItem(completedKey)) {
+                completeQuiz(q+1);
+                if(q+1 < quizCount){
+                    unlockQuiz(q+2);
+                }
+            }
+
         }
-      }
     }
     
     // Bir test tamamlandığında çağrılacak işlev

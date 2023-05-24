@@ -13,8 +13,8 @@ if(restartCheck === "true") {
 const nextLevel = parseInt(level) + 1;
 
 const answerTime = 60;
-var quizLimit = 10; // 10
-var minCorrectAnswer = 7;  // 7
+var quizLimit = 1; // 10
+var minCorrectAnswer = 0;  // 7
 var quizData = quizData1;
 
 switch (level) {
@@ -32,8 +32,8 @@ switch (level) {
         break;
     case "6":
         quizData = quizData6;
-        quizLimit = 20; // 20
-        minCorrectAnswer = 15; // 15
+        quizLimit = 1; // 20
+        minCorrectAnswer = 0; // 15
         break;
 }
 

@@ -62,11 +62,9 @@ const quizData4 = [
         correct: "b",
     },
     {
-        question: "Saat 17:00 olduğu anda sırada seçmenlere varsa;",
-        a: "Oy kullanamaz evlerine gönderilir.",
-        b: "Oy kullandırılmaz ama yardım etmeye çağırılır.",
-        c: "İçerde oldukları için başkan tarafından sayılır, kimlikleri toplanır ve oy kullandırılır.",
-        d: "Sandık kurulu toplanır ve oy kullanıp kullanamayacakları konusunda karar verilir.",
-        correct: "c",
+        question: " Sayım sırasında oy pusulalarından birine itiraz yapıldı ve sayım döküm sürecini izleyen bireyler arasında fiziksel şiddet içeren bir kavga çıktı. Ne yapılması gerekir?",
+        a: " Sandık kurulu başkanı seçimi durdurup müdahale eder.",
+        b: " Seçmenler kolluk kuvvetlerinin müdahele etmesi için ihbar eder.",
+        correct: "b",
     },
 ];

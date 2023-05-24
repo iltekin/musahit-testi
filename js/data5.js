@@ -58,13 +58,10 @@ const quizData5 = [
         correct: "c",
     },
     {
-        question: "Seçmenler oy kullanmak için üzerinde TC Kimlik Numarası bulunan hangi tür kimlikleri ibraz edebilirler?",
-        a: "Nüfus cüzdanı/ TC Kimlik Kartı",
-        b: "Evlenme Cüzdanı",
-        c: "Sürücü Belgesi",
-        d: "Avukat, Noter, Askeri Kimlik Kartları",
-        e: "Hepsi",
-        correct: "e",
+        question: "Sandık seçmen listesi seçim başlamadan sandık çevresinde seçmenlerin görüp inceleyebileceği bir yere asılır.",
+        a: "Doğru",
+        b: "Yanlış",
+        correct: "a",
     },
     {
         question: "Sabah çıkan boş oy pusulaları üzerinde işaret var ise kabul edilir mi?",

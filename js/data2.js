@@ -38,8 +38,8 @@ const quizData2 = [
     },
     {
         question: "Aşağıdakilerden bilgilerden hangisi müşahitlere dair doğrudur?",
-        a: "Oy verme sürecini izleyer ve sürecin şeffaf ve tarafsız olduğunu denetler",
-        b: "Siyasi partiler ve adaylar müşahit görevlendirilebilir",
+        a: "Oy verme sürecini izler ve sürecin şeffaf ve tarafsız olduğunu denetler",
+        b: "Siyasi partiler ve adaylar müşahit görevlendirebilir",
         c: "Müşahitler sandık kurulunun 298 numaralı kanuna aykırı işleyişlerde şikayet ve itiraz etmeye yetkilidir. (Kanun 298, md. 110, md. 128, md.116)",
         d: "Hepsi",
         correct: "d",

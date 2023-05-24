@@ -16,7 +16,7 @@ const quizData6 = [
         correct: "b",
     },
     {
-        prefix: "1) Huzurevinden gelen 80 yaşındaki amca\n2) Hamile bir kadın\n3) 40 yaşlarında öğretmen bayan,",
+        prefix: "1) Huzurevinden gelen 80 yaşındaki amca\n2) Hamile bir kadın\n3) 40 yaşlarında kadın öğretmen,",
         question: "Aşağıdakiler oy kullanmak için sıraya girdiklerinde öncelik sırası nasıl olmalıdır?",
         a: "3-1-2",
         b: "1-2-3",
@@ -92,10 +92,10 @@ const quizData6 = [
         correct: "d",
     },
     {
-        question: "Dursun Bey sandık kurulunun verdiği mührün çalışıp çalışmadığını test etmek istedi ve zarfın üzerine 'Evet' mührünü bastı. Oy sayımı sırasında bu zarf geçerli sayılır mı?",
-            a: "Evet, sonuçta seçim mührüdür.",
-        b: "Hayır, zarf üzerinde YSK, İlçe Seçim Kurulu ve Sandık mühürü harici işaret bulunamaz.",
-        correct: "b",
+        question: " Sayım ve döküm işlemlerinin tamamlanması sonucu hazırlanan tutanaklarda sandık kurulu mührü olmalıdır.",
+        a: "Doğru",
+        b: "Yanlış",
+        correct: "a",
     },
     {
         question: "Sandık kurulu en az kaç kişi ile çalışmaya başlar?",

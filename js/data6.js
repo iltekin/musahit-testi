@@ -16,12 +16,12 @@ const quizData6 = [
         correct: "b",
     },
     {
-        prefix: "1) Huzurevinden gelen 80 yaşındaki amca\n2) 18 yaşında ilk oyunu kullanan genç\n3) Hamile bir kadın\n4) 40 yaşlarında öğretmen bayan,",
+        prefix: "1) Huzurevinden gelen 80 yaşındaki amca\n2) Hamile bir kadın\n3) 40 yaşlarında öğretmen bayan,",
         question: "Aşağıdakiler oy kullanmak için sıraya girdiklerinde öncelik sırası nasıl olmalıdır?",
-        a: "1-2-3-4",
-        b: "3-4-2-1",
-        c: "2-4-1-3",
-        d: "3-1-2-4",
+        a: "3-1-2",
+        b: "1-2-3",
+        c: "1-3-2",
+        d: "2-1-3",
         correct: "d",
     },
     {
@@ -29,7 +29,7 @@ const quizData6 = [
         a: "Sandık başında, sandık kurulu üyelerinden biri veya birkaçı görevini yapmazsa yerine yedek üyelerden biri getirilir.",
         b: "Kurul üyeleri sayısı (başkan hariç) üçten aşağı düşerse ve yedek üye yok ise o seçim bölgesinde seçme yeterliliğine sahip, okur-yazar olanlar arasından başkanın seçeceği kimselerle tamamlanır.",
         c: "Sandık kurulu başkanı ve üç üyenin hazır bulunması halinde eksik üyeliklerin tamamlanması yoluna gidilmez.",
-        d: "Yeminden gelen sonra gelen sandık kurulu üyesi seçim başladıktan sonra bile görevine başlar.",
+        d: "Yeminden sonra gelen sandık kurulu üyesi seçim başladıktan sonra bile görevine başlar.",
         correct: "d",
     },
     {

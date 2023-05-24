@@ -7,7 +7,7 @@
 
 body {
     background-color: #ffffff;
-    background-image: url("../image/background.jpg?v=41");
+    background-image: url("../image/background.jpg?v=42");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -302,7 +302,7 @@ img.logo {
     position: absolute;
     top: 4vw;
     right: 4vw;
-    z-index: 3;
+    z-index: 9999;
 }
 
 #time {

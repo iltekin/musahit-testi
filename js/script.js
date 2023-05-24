@@ -49,7 +49,7 @@ const downloadBtn = document.getElementById('download-btn');
 let hideTimeout = null;
 
 const image = new Image();
-image.src = 'image/certificate.png?v=41';
+image.src = 'image/certificate.png?v=42';
 
 if(CSS.registerProperty !== undefined){
     CSS.registerProperty({
@@ -396,7 +396,7 @@ function createSourceLink(URL, number) {
 }
 
 function updateKart(q) {
-    kartImage.src = 'image/kart/'+ level +'_'+ q +'-min.png?v=41';
+    kartImage.src = 'image/kart/'+ level +'_'+ q +'-min.png?v=42';
 }
 
 function loadQuiz() {

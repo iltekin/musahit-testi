@@ -16,12 +16,12 @@ const quizData6 = [
         correct: "b",
     },
     {
-        prefix: "1) Huzurevinden gelen 80 yaşındaki amca\n2) Hamile bir kadın\n3) 40 yaşlarında öğretmen bayan,",
+        prefix: "1) Huzurevinden gelen 80 yaşındaki amca\n2) 18 yaşında ilk oyunu kullanan genç\n3) Hamile bir kadın\n4) 40 yaşlarında öğretmen bayan,",
         question: "Aşağıdakiler oy kullanmak için sıraya girdiklerinde öncelik sırası nasıl olmalıdır?",
-        a: "3-1-2",
-        b: "1-2-3",
-        c: "1-3-2",
-        d: "2-1-3",
+        a: "1-4-2-3",
+        b: "1-3-4-2",
+        c: "3-1-2-4",
+        d: "3-1-4-2",
         correct: "d",
     },
     {

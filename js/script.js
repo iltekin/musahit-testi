@@ -46,9 +46,10 @@ let totalTime = "";
 let tried = localStorage.getItem('tried') || 1;
 const today = formatDate(new Date());
 const downloadBtn = document.getElementById('download-btn');
+let hideTimeout = null;
 
 const image = new Image();
-image.src = 'image/certificate.png?v=39';
+image.src = 'image/certificate.png?v=40';
 
 if(CSS.registerProperty !== undefined){
     CSS.registerProperty({
@@ -395,7 +396,7 @@ function createSourceLink(URL, number) {
 }
 
 function updateKart(q) {
-    kartImage.src = 'image/kart/'+ level +'_'+ q +'-min.png?v=39';
+    kartImage.src = 'image/kart/'+ level +'_'+ q +'-min.png?v=40';
 }
 
 function loadQuiz() {
@@ -551,6 +552,7 @@ function restartTest(testIndex) {
 
 submitBtn.addEventListener('click', () => {
 
+    clearTimeout(hideTimeout);
     const answer = getSelected()
     if(answer) {
             let widthInPercent = currentQuiz * (100/quizLimit) + (100/quizLimit);
@@ -559,10 +561,17 @@ submitBtn.addEventListener('click', () => {
                 score++
                 document.getElementById("false").classList.add("gizle");
                 document.getElementById("true").classList.remove("gizle");
+                playNow("yes");
             } else {
                 document.getElementById("true").classList.add("gizle");
                 document.getElementById("false").classList.remove("gizle");
+                playNow("no");
             }
+
+            hideTimeout = setTimeout(function(){
+                document.getElementById("true").classList.add("gizle");
+                document.getElementById("false").classList.add("gizle");
+            }, 2000);
 
             currentQuiz++
             updateKart(currentQuiz);
@@ -570,7 +579,6 @@ submitBtn.addEventListener('click', () => {
             if(currentQuiz < quizLimit) {
                 loadQuiz();
                 clearLiHighlights();
-                playNow("next");
             } else {
             clearInterval(counter);
             let endDate = new Date();

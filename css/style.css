@@ -7,7 +7,7 @@
 
 body {
     background-color: #ffffff;
-    background-image: url("../image/background.jpg?v=39");
+    background-image: url("../image/background.jpg?v=40");
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -647,18 +647,26 @@ li:hover {
     position: relative;
 }
 
+#true {
+    background-color: #0eae59;
+}
+
+#false {
+    background-color: #dd191d;
+}
+
 .true_false {
-    position: absolute;
-    left: 50%;
+    position: fixed;
+    left: 0;
     top: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #f3ede4;
-    transform: translate(-50%, -50%);
     padding: 6px 30px;
-    border-radius: 10px;
     box-shadow: 0 0 10px 10px rgba(100, 100, 100, 0.1);
+    width: 100%;
+    text-align: center;
+    color: #FFFFFF;
 }
 
 .true_false .tf_text {
@@ -708,12 +716,6 @@ li:hover {
     #gizlikart {
         height: auto;
         width: 85vw;
-    }
-
-    .true_false {
-        min-width: 70%;
-        text-align: center;
-        transform: translate(-50%, -70%);
     }
 
     .true_false img {

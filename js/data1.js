@@ -1,6 +1,6 @@
 const quizData1 = [
     {
-        question: "Saat 17:00 olduğu anda sırada seçmenlere varsa;",
+        question: "Saat 17:00 olduğunda sırada seçmenler varsa;",
         a: "Oy kullanamaz evlerine gönderilir",
         b: "Oy kullandırılmaz ama yardım etmeye çağırılır",
         c: "Sırada oldukları için başkan tarafından sayılır, kimlikleri toplanır ve oy kullandırılır",

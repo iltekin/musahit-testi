@@ -41,8 +41,8 @@ const quizData6 = [
         correct: "c",
     },
     {
-        question: "Leman Teyze seçim sonrasında kapıda asılı tutanağı görmeye sandığına gitti ve çöpte yanmış oy pusulaları gördü. Bu pusulalar neden yakılmıştır?",
-            a: "Bir partinin pusulalarını oyları değiştirmek için yakmışlardır",
+        question: "Leman Teyze seçim sonrasında kapıda asılı tutanağı görmeye sandığına gitti ve çöpte yanmış zarflar gördü. Bu zarflar neden yakılmıştır?",
+        a: "Bir partinin pusulalarını oyları değiştirmek için yakmışlardır",
         b: "Sandık kurulu üyeleri ısınmak istemiştir",
         c: "Geçersiz oyları yakmışlardır",
         d: "Sandıktan çıkan zarf sayısı oy kullanan seçmen sayısından fazladır",

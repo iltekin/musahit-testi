@@ -423,6 +423,8 @@ v=43
         const lastCompletedElement = document.getElementById(lastCompletedKey);
         lastCompletedElement.style.display = 'block';  // Son tamamlanan testi göster
       }
+        // add +1 hit
+        incrHit()
     };
     
     function clearLocalStorage() {
@@ -437,6 +439,16 @@ v=43
         localStorage.setItem("restartIndex", testIndex);
         window.location.href = "test.html";
     }
+
+    function incrHit() {
+    let xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://count.iltekin.com/musahittesti/get/start");
+    xhr.responseType = "json";
+    xhr.onload = function() {
+        console.log(this.response.value);
+    }
+    xhr.send();
+}
     
 </script>
 

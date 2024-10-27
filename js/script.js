@@ -1,4 +1,4 @@
-const api = "https://count.musahittesti.org:5001";
+const api = "https://count.iltekin.com/musahittesti";
 
 let restart = false;
 const restartCheck = localStorage.getItem('restart') || false;
@@ -289,6 +289,8 @@ startButton.addEventListener('click', function () {
     getHitNumber(true);
 
 })
+
+inc
 
 function getHitNumberXXXXXXXXXXXX(add = false) {
     let xhr = new XMLHttpRequest();

@@ -441,14 +441,14 @@ v=43
     }
 
     function incrHit() {
-    let xhr = new XMLHttpRequest();
-    xhr.open("GET", "https://count.iltekin.com/musahittesti/get/start");
-    xhr.responseType = "json";
-    xhr.onload = function() {
-        console.log(this.response.value);
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET", "https://count.iltekin.com/musahittesti/incr/start");
+        xhr.responseType = "json";
+        xhr.onload = function() {
+            console.log(this.response.value);
+        }
+        xhr.send();
     }
-    xhr.send();
-}
     
 </script>
 

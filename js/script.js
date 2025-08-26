@@ -290,8 +290,6 @@ startButton.addEventListener('click', function () {
 
 })
 
-inc
-
 function getHitNumberXXXXXXXXXXXX(add = false) {
     let xhr = new XMLHttpRequest();
     if(add){

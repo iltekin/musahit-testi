@@ -1,4 +1,4 @@
-const api = "https://count.iltekin.com/musahittesti";
+const api = "https://code.iltekin.com/count/musahittesti";
 
 let restart = false;
 const restartCheck = localStorage.getItem('restart') || false;
